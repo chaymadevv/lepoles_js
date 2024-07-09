@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <h1>Variables</h1>
+
+    <script>
+       var prenom;// déclaration de la variable prenom avec le mot-clé 'var'
+       let nombre; //déclaration de la variable prenom avec le mot-clé 'let' 
+       /*En JS, on peut aussi déclarer une variable sans utiliser de mot-clé*/
+       adresse= "4 allée du petit tonneau";
+       // déclarer une variable adresse sans mot-clé:
+       /*AFFECTATION
+       donner une valeur à une variable
+       Opérateur :
+          =
+       Syntaxe :
+         variable = valeur;   
+       */
+      prenom="Didier";
+      document.write("Bonjour " + prenom + "<br>");
+
+      // On ne peut pas utiliser une variable qui n'a pas été initialisé
+      // ( variable déclarée mais aucune valeur n'à été affecté)
+      document.write("Le nombre est " + nombre + "<br>") 
+
+      // On ne peut pas utiliser une variable qui na pas été déclarée (erreur)
+      // document.write("la ville de " +ville);
+
+      let age = 33; // déclaration et affection dans la meme instruction 
+
+      // TYPE DE DONNEES 
+
+      /*
+      1.CHAINE DE CARACTERES : string
+       Une expréssion de type sstring est entourée de "" (guillemets ou double quote) ou de '' (apostrophes, single quote).
+
+       */
+
+      let text ="l'arbre qui cache la \"foret\"";
+      document.write(texte + "<br>");
+      texte = 'l\'avion';
+      document.write(texte + "<br>")
+
+      /*
+      2.NUMERIQUE : number
+         Une expression numérique n'est pas délimitée par des caratères 
+      */
+
+       age = 52;
+
+      /* 
+      3. BOOLEEN : boolean
+          Une expression booléenne peut prendre que 2 valeurs :
+          true, false
+      */
+      
+      let vraiFaux = true;
+      vraiFaux = false
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TABLEAU : Array</h1>
+    <p> un tableau est une variable ui va contenir plusieurs valeurs.
+        Pour déclarer un tableau, on utilise la synthaxe suivante
+    </p>
+    <p><code> let nomDeLAVAriable = [ valeur1, valeur2, ...]</code></p>
+    <p> Pour accéder à une valeur de ce tableau, on va utiliser son indice, c'est a dire sa position dans le tableau.
+    </p>
+    <p><code> nomDeLaVariable[indice]</code></p>
+    <p><mark> ⚠ la numérotation des indices commences à 0</mark></p>
+    
+    <script>
+        let semaine = ["lundi", "mardi", "mercredi", "jeudi", " vendredi", " samedi", " dimanche"];
+        document.write("le type de la variable <i>semaine</i> est ")
+        document.write(typeof semaine);
+        document.write("<hr>");
+        document.write(semaine);
+        document.write("<hr>");
+        document.write("1<sup>er</sup jour de la semaine(1<sup>ère</sup> valeur du tableau) : ");
+        document.write(semaine[0]);
+        document.write("<hr>");
+        document.write("longueur du tableau(<code>semaine.length</code>):");
+        document.write(semaine.length);
+        document.write("<hr>");
+        document.write("Dernier jour de la semaine : ");
+
+
+        /* EXO : affichez le dernier jour de la semaine en utilisant la longueur du tableau */
+
+        document.write(semaine[semaine.length-1]);
+
+        document.write(" Quel est l'indice du <i>mercredi</i>  ?");
+        document.write(semaine.indexOf("mercredi"));
+
+        /* indexOf permet de chercher une valeur dans un tableau. Si la valeur n'est pas trouvé, indexOf vaut -1*/
+
+        document.write("Quel est l'indice du <i>nimp</i> ? ");
+        document.write(semaine.indexOf("nimp"));
+
+        /* EXO : Est ce que "mordi" est une valeur du tableau semaine ?
+        Si oui, affichez sont insice, affichez "mordi n'est pas trouvé dans le tableau " */
+        if( semaine.indexOf("mordi") == -1){
+            document.write("mordi n'est pas trouvé dans le tableau");
+        } else {
+            document.write( semaine.indexOf("mordi"));
+        }
+
+        document.write("<hr>Exercice<br>");
+        let valeurRecherche ="dimanche";
+        let indice = semaine.indexOf(valeurRecherchee);
+        if (indice != -1) {
+         document.write(indice);
+        } else {
+         document.write(valeurRecherchee + " n'est pas trouvé dans le tableau");
+        }
+
+        //
+         semaine[0] ="aujourd'hui";
+         document.write("<hr>"+ semaine);
+         console.log(semaine);
+
+         semaine[7] = "hier";;
+
+         // semaine[50] = "c'est beaucoup";
+         /* 🔺 il ne faut jamais ajouter une valeur à un tableau en utilisant les indices (par exemple semaine[50] = "c'est beaucoup";)
+         parce que JS va crée autant de cases dans le tableau que de valeurs du plus grand indice.
+         */
+        
+    
+        </script>
+        <h2>Ajouter une valeur das un tableau</h2>
+        <p>On va utiliser la fonction <code>push</code> de l'objet du tableau</p>
+        <p>Syntaxe: <code>tableau.push(valeurAajouter);</code></p>
+       <script>
+        semaine.push("nouveau jour");
+       </script>
+
+       <h2>Supprimer la dernière valeur d'un tableau</h2>
+       <p>La fonction <code>pop</code> de l'objet tableau supprime la dernière valeur du tableau.</p>
+       <p>Syntaxe : <code>tableau.pop();</code></p>
+       <script>
+        selaine.pop();
+         console.log(semaine, semaine.length);
+       </script>
+    </body>
+</html>
