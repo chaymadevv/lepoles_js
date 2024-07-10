@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Affichez tous les nombres compris entre 92 et 163 (chaque nombre sur la ligne)/
+        // for (let i = 92; i <= 163; i++) {
+        //     document.write("<p>" + i + "</p>")
+        // }
+        // exo 1
+
+        // for (let i = 163; i >= 92; i--) {
+        //     document.write("<p>" + i + "</p>")
+        // }
+        / 4. Affichez dans une balise ul, toutes les valeurs du tableau semaine
+                en utilisant une boucle FOR . 
+                • 1 - lundi
+                • 2 - mardi
+                • 3 ....
+         /
+
+
+        / 5. Affichez toutes les valeurs du tableau suivi du type de données de cette valeurs. Par exemple, 
+                • 5 - number
+                • bonjour - string
+                • false - boolean 
+                */
+        let tableau = [5, 5.2, "5.2", true, 5 > 3, 2 + 2, 2 + "2", [1, 2, 3]];
+        document.write("<ul>");
+        for (let i = 0; i < tableau.length; i++) {
+            document.write("<li>");
+            document.write(tableau[i]);
+            document.write(" - ");
+            document.write( typeof tableau[i]);
+            document.write("</li>");
+            // <li>0 : 5 - number</li>
+            }
+        document.write("</ul>");
+
+    </script>
+</body>
+
+</html>
