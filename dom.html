@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.O.M</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .rouge {
+            background-color: red;
+        }
+
+        .bleu {
+            background-color: blue;
+        }
+
+        #madiv {
+            width: 250px;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function(){
+            let maDiv= document.querySelector("#madiv");
+            console.log(maDiv);
+
+            maDiv.addEventListener("click", function(evt){
+                alert("clic sur #madiv");
+                console.log(evt);
+            });
+
+            maDiv.addEventListener("mouseenter", funcionn())
+        })
+    </script>
+</head>
+
+<body>
+    <h1>
+        D.O.M : Document Object Model
+
+    </h1>
+    <p>
+        Lorsque le navigateur charge une page HTML, javascript crée un objet pour chaque élément HTML de cette page.
+        C'est ce qu'on appelle le DOM.
+    </p>
+    <p>
+        Dans cette représentation orienté objet d'une page web, tous les éléments de la page sont des propriétés d'un
+        objet : <i>window</i>
+        Pour simplifier, l'objet <i>window</i> représente l'onglet du navigateur.
+        Comme tous les éléments sont des éléments de cet objet, on n'a pas besoin de le préciser, il est implicite.
+    </p>
+    <p>
+        L'objet qui représente la page HTML est <i>document</i>
+    </p>
+    <hr>
+    <div id="madiv" class="rouge">texte</div>
+    <div class="rouge">rouge</div>
+    <div class="bleu">bleu</div>
+    <a href="objet.html">Objets</a>
+    <hr>
+    <div id="resultat"></div>
+    <script>
+        let maDiv = document.querySelector("#madiv");
+        console.log(maDiv);
+        document.write("<br>id = " + maDiv.id);
+        document.write("<br>class =" + maDiv.className);
+
+        let div_change_class = document.querySelector("#resultat");
+        div_change_class.className = "rouge";
+        maDiv.style.color = "white"
+        maDiv.style.border = "5px solid black"
+
+        // éléments récupérés avec une classe
+        let elementsRouges = document.querySelectorAll(".rouge");
+
+        /* Affichez, dans la console, l'id de chaque élément se trouvenant dans l'array elementsRouge
+        */
+
+         for(let i = 0; i < elementsRouges.length; i++){
+            console.log(elementsRouges[i].id);
+        }// version avec  FOR OF
+
+        for (const elementRouge of elementsRouges) {
+            console.log( elementRouge.id);
+
+        }
+
+        // Mettre la classe 'bleu' a tous les éléments qui ont la classe'rouge'
+       elementsRouges.forEach(function(elementRouge){
+        elementRouge.className = "bleu";
+       });
+        
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
